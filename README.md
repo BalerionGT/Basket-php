@@ -60,7 +60,7 @@ This document provides an overview of the database structure and functionality o
 ## Workflow Overview
 
 1. **Order Handling:**
-   - Users add products via main.php, which directs to order.php for adding items to the order.
+   - Users add products via `main.php`, which directs to order.php for adding items to the order.
 
 2. **Offer Display:**
    - `offer.php` fetches and displays current offers to enhance the shopping experience by showing applicable discounts.
