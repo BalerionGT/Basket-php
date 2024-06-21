@@ -38,7 +38,7 @@ This document provides an overview of the database structure and functionality o
 ## PHP Files Overview
 
 1. **order.php**
-   - Description: Responsible for inserting purchased items into the `order_products` table and updating quantities in the `orders` table.
+   - Description: Responsible for inserting purchased items into the `order_products` table.
    - Usage: Typically invoked when a user confirms their purchase.
 
 2. **delivery.php**
