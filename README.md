@@ -7,25 +7,34 @@ This document provides an overview of the database structure and functionality o
 ### Tables
 
 1. **offers**
-   - Description: Contains information about the offers available in the system.
-   - Columns: (List columns here, e.g., offer_id, offer_name, offer_description, etc.)
+   - **offer_id** (Primary Key): Unique identifier for each offer.
+   - **description**: Description of the offer.
+   - **product_code** (Index): Code of the product associated with the offer.
+   - **buy_quantity**: Quantity of products required to trigger the offer.
+   - **get_quantity**: Quantity of products customers receive as part of the offer.
+   - **discount_percentage**: Percentage discount applied as part of the offer.
+   - **start_date**: Start date of the offer validity.
+   - **end_date**: End date of the offer validity.
 
 2. **orders**
-   - Description: Stores details about customer orders.
-   - Columns: (List columns here, e.g., order_id, customer_id, order_date, etc.)
+   - **order_id** (Primary Key): Unique identifier for each order.
+   - **customer_id**: Identifier for the customer placing the order.
+   - **order_date**: Date when the order was placed.
 
 3. **order_products**
-   - Description: Maps products to orders and stores quantities.
-   - Columns: (List columns here, e.g., order_id, product_id, quantity, etc.)
+   - **order_id** (Foreign Key): References the order to which the product belongs.
+   - **product_code**: Code of the product added to the order.
+   - **quantity**: Quantity of the product added to the order.
 
 4. **products**
-   - Description: Holds information about the products available for purchase.
-   - Columns: (List columns here, e.g., product_id, product_name, price, etc.)
+   - **product_code** (Primary Key): Unique identifier for each product.
+   - **product_name**: Name of the product.
+   - **price**: Price of the product.
 
 ## Assumptions
 
 1. **Cart Assumption:**
-   - In order table I've created an element with the id 1 that was my order test , normally there will be an order button where the user can creat an order that it will be inserted in the database.
+   - In order table I've created an element with the id 1 that was my order test , normally there will be an order button where the user can creat an order that it will be inserted in the database, with the custumer id.
 ## PHP Files Overview
 
 1. **order.php**
