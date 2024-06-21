@@ -55,7 +55,7 @@ This document provides an overview of the database structure and functionality o
 
 5. **main.php**
    - Description: Contains the main user interface for the application, integrating functionality from other PHP files.
-   - Usage: Provides navigation and interaction points for customers to browse products, add them to the cart, and proceed to checkout.
+   - Usage: Provides navigation and interaction points for customers to browse products, add them to the cart, and proceed to display the total.
 
 ## Workflow Overview
 
