@@ -59,19 +59,15 @@ This document provides an overview of the database structure and functionality o
 
 ## Workflow Overview
 
-1. **Order Generation:**
-   - Orders are typically generated when a user clicks a purchase button, triggering the `order.php` script to record the transaction details.
+1. **Order Handling:**
+   - Users add products via main.php, which directs to order.php for adding items to the order.
 
 2. **Offer Display:**
-   - The `offer.php` script fetches and displays relevant offers or discounts from the database, enhancing customer shopping experience.
+   - `offer.php` fetches and displays current offers to enhance the shopping experience by showing applicable discounts.
 
 3. **Total Calculation:**
-   - Upon checkout, `total.php` calculates the total cost of items in the cart, including any applicable taxes and discounts.
+   - During checkout, `total.php` calculates the total cost based on selected items, applying any relevant discounts fetched from offers table.
 
 4. **Delivery Information:**
-   - `delivery.php` provides users with clear guidelines on delivery options, fees, and expected delivery times.
+   - Not directly handled in these scripts but typically managed via `delevery.php` to display shipping options, fees, and timelines
 
-## Additional Notes
-
-- Ensure that database connections and configurations are appropriately managed in each PHP file to maintain security and efficiency.
-- Continuous testing and validation of database operations and PHP scripts are recommended to ensure smooth functionality.
